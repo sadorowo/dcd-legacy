@@ -12,8 +12,8 @@ if (!startPage || !templatePage) {
         const patches = DATA?.[input.value];
 
         if (!patches) return alert('Bad access code!');
-        await fadeBlock()
-        applyPatches(patches)
+        applyPatches(patches);
+        await fadeBlock();
     }
 
     function applyPatches(patches) {
@@ -33,6 +33,7 @@ if (!startPage || !templatePage) {
         await wait(0.2);
         startPage.style.display = 'none';
         await wait(0.2);
+        templatePage.style.display = 'block';
         templatePage.style.opacity = 1;
     }
 
