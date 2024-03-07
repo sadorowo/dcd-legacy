@@ -5,6 +5,12 @@ A static website that returns appropriate content to the website user based on t
 ### ATTENTION!
 This site is not secure at all! If you want to store private information, do not use this repository, because anyone can access **all available IDs**! This is mainly a hobby project.
 
+## Which files am I allowed to edit?
+- [template section of index.html](index.html)
+- all files in `data` directory:
+    - [data-source.js](data/data-source.js)
+    - [custom-style.css](data/custom-style.css)
+
 ## How to use
 Firstly, create template for your webpage. Go to [index.html](index.html) and edit code **only between these lines**:
 ```html
@@ -12,6 +18,7 @@ Firstly, create template for your webpage. Go to [index.html](index.html) and ed
  
 <!-- TEMPLATE ENDS -->
 ```
+This is the **template directory** of the HTML file.
 
 Example:
 ```html
@@ -22,7 +29,16 @@ Example:
 
 Then, using your template, modify your data in [data-source.js](data/data-source.js).
 How to do this?
-View examples [here](data/data-source.example.js).
+
+1. This is base template of the `DATA` object:
+```js
+"<id>": {
+    "<selector 1>": () => { ... },
+    "<selector 2>": () => { ... },
+    ...
+}
+```
+2. View example [here](data/data-source.example.js).
 
 Example based on HTML provided above:
 ```js

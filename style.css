@@ -14,13 +14,16 @@ html, body {
 }
 
 body {
-    background-color: var(--background);
     font-family: 'Raleway', sans-serif;
     padding: 0;
     margin: 0;
 }
 
-#start-page {
+#internal__start-page, #internal__template {
+    transition: opacity 0.2s ease-in-out;
+}
+
+#internal__start-page {
     width: 100%;
     height: 100%;
 
@@ -28,25 +31,27 @@ body {
     display: grid;
     place-items: center;
     align-content: center;
+
+    background-color: var(--background) !important;
 }
 
-#start-page > *:is(h1, h2, h3, h4, h5, h6, p, span) {
+#internal__start-page > *:is(h1, h2, h3, h4, h5, h6, p, span) {
     color: var(--text);
 }
 
-#start-page > input {
+#internal__start-page > input {
     border-radius: 10px;
     text-align: center;
     height: 50px;
     border: none;
 }
 
-#start-page > input:focus {
+#internal__start-page > input:focus {
     border: none;
     outline: none;
 }
 
-#start-page > button {
+#internal__start-page > button {
     border: none;
     outline: none;
     cursor: pointer;
@@ -58,6 +63,6 @@ body {
     transition: background-color 0.2s ease-in-out;
 }
 
-#start-page > button:hover {
+#internal__start-page > button:hover {
     background-color: var(--button-color-hover);
 }
