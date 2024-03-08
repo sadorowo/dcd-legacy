@@ -1,3 +1,7 @@
+**UPDATE:** New version of DCD!
+So... This is really insecure. Everyone can look at your .js file and steal all IDs.
+New version of DCD is available [here](https://github.com/sadorowo/dynamic-content-delivery).
+
 ## Dynamic Content Delivery
 
 A static website that returns appropriate content to the website user based on the provided ID.
@@ -18,7 +22,7 @@ Firstly, create template for your webpage. Go to [index.html](index.html) and ed
  
 <!-- TEMPLATE ENDS -->
 ```
-This is the **template directory** of the HTML file.
+This is the **template section** of the HTML file.
 
 Example:
 ```html
