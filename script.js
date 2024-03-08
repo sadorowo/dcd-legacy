@@ -1,12 +1,12 @@
 const startPage = document.getElementById('internal__start-page');
 const templatePage = document.getElementById('internal__template');
 
+const wait = (time) => new Promise(resolve => setTimeout(resolve, time * 1000));
+
 if (!startPage || !templatePage) {
     alert("Base website template got corrupted! Can't find either start page or template page. Closing the window.");
     window.close();
 } else {
-    const wait = (time) => new Promise(resolve => setTimeout(resolve, time * 1000))
-
     async function proceed() {
         const input = document.querySelector('#internal__start-page > input');
         const patches = DATA?.[input.value];
